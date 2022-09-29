@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+    <EditText
+        android:id="@+id/editTextScoreList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="241dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:textAlignment="center"
+        android:textColor="#6A6A6A"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewCounter" />
+
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="266dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="117dp"
+        android:layout_marginBottom="11dp"
+        android:gravity="center"
+        android:text="0:00:00"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextScoreList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="272dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextScoreList"
+        app:layout_constraintVertical_bias="0.060000002">
+
+        <Button
+            android:id="@+id/btnRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="restart"
+            android:text="RESTART" />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="start"
+            android:text="START" />
+
+        <Button
+            android:id="@+id/btnPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="pause"
+            android:text="PAUSE" />
+
+        <Button
+            android:id="@+id/btnLap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="lap"
+            android:text="LAP" />
+
+    </LinearLayout>
+
+    <Switch
+        android:id="@+id/switchLapText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="disableSameScore"
+        android:text="Disable the same score"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.22000003" />
+
+    <Switch
+        android:id="@+id/switchDarkMode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="25dp"
+        android:onClick="darkMode"
+        android:text="Dark mode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
